@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div id="auth">
+        <h2>Регистрация</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Имя пользователя" required>
+            <input type="password" id="registerPassword" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    
+        <h2>Вход</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Имя пользователя" required>
+            <input type="password" id="loginPassword" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+    <div id="app">
+        <h1>Управление задачами</h1>
+        <form id="taskForm">
+            <input type="text" id="title" placeholder="Название задачи" required>
+            <textarea id="description" placeholder="Описание задачи"></textarea>
+            <select id="status">
+                <option value="новая">Новая</option>
+                <option value="в процессе">В процессе</option>
+                <option value="завершена">Завершена</option>
+            </select>
+            <input type="date" id="dueDate" placeholder="Срок выполнения">
+            <input type="date" id="reminder" placeholder="Напоминание">
+            <button type="submit">Добавить задачу</button>
+        </form>
+        <ul id="taskList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
